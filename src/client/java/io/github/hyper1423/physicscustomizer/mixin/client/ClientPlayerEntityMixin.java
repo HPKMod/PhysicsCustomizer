@@ -71,7 +71,7 @@ public abstract class ClientPlayerEntityMixin extends AbstractClientPlayerEntity
     @ModifyVariable(
             method = "tickMovement",
             at = @At("STORE"),
-            name = "bl9"
+            index = 10 // boolean bl9
     )
     private boolean allowSprintingOverWater(boolean original) {
         if (PhysicsCustomizerClient.getPhysicsConfig().getEntry(PhysicsConfigKeys.PRE_1_13_SWIMMING).getValue()) {

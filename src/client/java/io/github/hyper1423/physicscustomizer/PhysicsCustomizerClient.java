@@ -33,7 +33,7 @@ public class PhysicsCustomizerClient implements ClientModInitializer {
 
 	@Override
 	public void onInitializeClient() {
-		PhysicsCustomizer.LOGGER.info("HEYYYY!!!");
+		PhysicsCustomizer.LOGGER.info("Initialize PhysicsCustomizer v0.0.1");
 
 		CommandInitializer commandInit = new CommandInitializer(this);
 		commandInit.init();

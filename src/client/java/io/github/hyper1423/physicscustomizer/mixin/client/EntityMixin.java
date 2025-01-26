@@ -31,7 +31,7 @@ public abstract class EntityMixin {
     @ModifyVariable(
             method = "adjustMovementForCollisions(Lnet/minecraft/util/math/Vec3d;Lnet/minecraft/util/math/Box;Ljava/util/List;)Lnet/minecraft/util/math/Vec3d;",
             at = @At("STORE"),
-            name = "bl"
+            index = 9 // boolean bl
     )
     private static boolean onFacingCheck(boolean speedZGreaterThanX) {
         var facingRule = PhysicsCustomizerClient.getPhysicsConfig().getEntry(PhysicsConfigKeys.WALL_COLLISION_RULE).getValue();
@@ -123,10 +123,8 @@ public abstract class EntityMixin {
 
     @ModifyVariable(
             method = "adjustMovementForCollisions(Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/Vec3d;",
-            at = @At(
-                    value = "STORE"
-            ),
-            name = "box2"
+            at = @At("STORE"),
+            index = 9 // Box box2
     )
     private Box onSteppingFallingCheck(Box box2) {
         if (PhysicsCustomizerClient.getPhysicsConfig().getEntry(PhysicsConfigKeys.ALLOW_BLIP).getValue()) {
@@ -139,10 +137,8 @@ public abstract class EntityMixin {
 
     @ModifyVariable(
             method = "adjustMovementForCollisions(Lnet/minecraft/util/math/Vec3d;)Lnet/minecraft/util/math/Vec3d;",
-            at = @At(
-                    value = "STORE"
-            ),
-            name = "f"
+            at = @At("STORE"),
+            index = 12 // float f
     )
     private float useMovementYInstead(float f, Vec3d movement) {
         var fallbackMode = PhysicsCustomizerClient.getPhysicsConfig().getEntry(PhysicsConfigKeys.BLIP_FALLBACK_MODE).getValue();
@@ -155,10 +151,8 @@ public abstract class EntityMixin {
 
     @ModifyVariable(
             method = "collectStepHeights",
-            at = @At(
-                    value = "STORE"
-            ),
-            name = "floatSet"
+            at = @At("STORE"),
+            index = 4 // FloatSet floatSet
     )
     private static FloatSet addFallbackStepHeight(FloatSet instance, Box collisionBox, List<VoxelShape> collisions, float f, float stepHeight) {
         var fallbackMode = PhysicsCustomizerClient.getPhysicsConfig().getEntry(PhysicsConfigKeys.BLIP_FALLBACK_MODE).getValue();

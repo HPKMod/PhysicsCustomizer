@@ -37,7 +37,7 @@ loom {
 	splitEnvironmentSourceSets()
 
 	mods {
-		"hpkmod" {
+		"physicscustomizer" {
 			sourceSet sourceSets.main
 			sourceSet sourceSets.client
 		}

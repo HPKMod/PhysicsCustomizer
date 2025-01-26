@@ -15,7 +15,7 @@
     "LivingEntityMixin",
     "PaneBlockMixin",
     "PlayerEntityMixin",
-    "SoulSandBlockMixin",
+    "SoulSandBlockMixin"
   ],
   "injectors": {
     "defaultRequire": 1

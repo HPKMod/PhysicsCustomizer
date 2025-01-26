@@ -1,0 +1,23 @@
+{
+  "required": true,
+  "package": "io.github.hyper1423.physicscustomizer.mixin.client",
+  "compatibilityLevel": "JAVA_21",
+  "client": [
+    "BlockStatesLoaderMixin",
+    "ClientPlayerEntityMixin",
+    "DebugHudMixin",
+    "KeyboardInputMixin"
+  ],
+  "mixins": [
+    "EntityMixin",
+    "FlowableFluidMixin",
+    "LadderBlockMixin",
+    "LivingEntityMixin",
+    "PaneBlockMixin",
+    "PlayerEntityMixin",
+    "SoulSandBlockMixin",
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

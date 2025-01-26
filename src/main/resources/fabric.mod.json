@@ -1,0 +1,41 @@
+{
+	"schemaVersion": 1,
+	"id": "physicscustomizer",
+	"version": "${version}",
+	"name": "PhysicsCustomizer",
+	"description": "A mod to modify default Minecraft player physics.",
+	"authors": [
+		"hyper1423"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/physicscustomizer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"io.github.hyper1423.physicscustomizer.PhysicsCustomizer"
+		],
+		"client": [
+			"io.github.hyper1423.physicscustomizer.PhysicsCustomizerClient"
+		]
+	},
+	"mixins": [
+		"physicscustomizer.mixins.json",
+		{
+			"config": "physicscustomizer.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21.4",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

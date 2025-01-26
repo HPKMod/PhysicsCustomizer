@@ -1,11 +1,8 @@
 package io.github.hyper1423.physicscustomizer;
 
 import io.github.hyper1423.physicscustomizer.commands.CommandInitializer;
-import io.github.hyper1423.physicscustomizer.config.Config;
 import io.github.hyper1423.physicscustomizer.config.PhysicsConfig;
-import io.github.hyper1423.physicscustomizer.render.PhysicsCustomizerModelLoadingPlugin;
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.client.model.loading.v1.ModelLoadingPlugin;
 
 import java.io.IOException;
 import java.nio.file.Files;
